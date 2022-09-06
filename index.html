@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Card</title>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/20cee36f21.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="body" class="theme--dark">
+    <input type="checkbox" id="menu" />
+    <input type="checkbox" id="night" />
+    <div id="container">
+      <div class="header">
+        <label for="night" class="night-mode" onclick="enableNight()">
+          <i class="fa-solid fa-moon"></i>
+        </label>
+      </div>
+      <section class="left-section">
+        <img src="profile.jpg" alt="" class="profile-pic" />
+        <div class="profile-details">
+          <span class="profile-maps">
+            <i class="fa-solid fa-location-dot"></i> HCM city
+          </span>
+          <p class="profile-name">Pham Hoang Long</p>
+          <span class="profile-summary">Web Front-End Reactjs Developer</span>
+          <a
+            href="CV-pham_hoang_long-frontend_developer.pdf"
+            download
+            class="profile-cv"
+            >Download CV</a
+          >
+        </div>
+        <div class="profile-pils">
+          <span class="pils"
+            ><a href="https://github.com/PhamHoangLong135" target="_blank"
+              ><i class="fa-brands fa-github"></i> Github</a
+            ></span
+          >
+          <span class="pils"
+            ><a href="https://www.facebook.com/long.shino.1352" target="_blank"
+              ><i class="fa-brands fa-facebook"></i> Facebook</a
+            ></span
+          >
+          <span class="pils"
+            ><a href="https://www.instagram.com/shino____pham/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i> Instagram</a
+            ></span
+          >
+          <span class="pils"
+            ><a
+              href="https://www.linkedin.com/in/ph%E1%BA%A1m-long-345b50220/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i> Linkedin</a
+            ></span
+          >
+        </div>
+      </section>
+      <div class="front-smooth"></div>
+    </div>
+    <script>
+      let enableNight = () => {
+        var body = document.getElementById("body");
+        if (body.classList.contains("theme--light")) {
+          body.classList.remove("theme--light");
+          body.classList.add("theme--dark");
+        } else {
+          body.classList.remove("theme--dark");
+          body.classList.add("theme--light");
+        }
+      };
+    </script>
+  </body>
+</html>
